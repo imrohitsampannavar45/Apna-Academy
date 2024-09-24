@@ -1,9 +1,16 @@
 const express = require('express');
-const {userModel} = require('./users')
-const {courseModel} = require('./courses')
+const {userRouter} = require('./users.js')
+const {courseRouter} = require('./courses.js')
 const app = express();
+app.use(express.json());
 
-userModel(app);
-courseModel(app);
+
+
+
+app.use("/api/v1/user", userRouter);
+app.use("/api/v1/course", courseRouter);
+
+// userModel(app);
+// courseModel(app);
 
 app.listen(3000);

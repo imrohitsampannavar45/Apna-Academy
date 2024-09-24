@@ -1,24 +1,15 @@
-const express = require('express');
-const router = express.Router()
-
-courseModel = courseModel.Router();
+const {Router} = require("express")
+const courseRouter = Router();
 
 
-courseModel.post('/purchase', function(req,res){
-    res.json({
-        message:"Purchase Endpoint"
-    })
-})
 
-courseModel.post('/course/purchase', function(req,res){
+courseRouter.post("/purchase", function(req, res) {
     res.json({
         message:"Purchases All Endpoint"
     })
 })
 
-
-
-    courseModel.get("/courses", function(req,res){
+courseRouter.get("/preview",  function(req, res) {
         res.json({
             message:"All the Purchases Endpoints"
         })
@@ -26,5 +17,5 @@ courseModel.post('/course/purchase', function(req,res){
 
 
     module.exports={
-        courseModel:courseModel
+      courseRouter: courseRouter
     }
