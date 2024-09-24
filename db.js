@@ -1,6 +1,4 @@
 const{ mongoose } = require("mongoose");
-console.log("connected to db");
-mongoose.connect("mongodb+srv://rohit:CVMKtHd05TmXYotx@cluster0.12uit.mongodb.net/apna-academy")
 const Schema = mongoose.Schema;
 const ObjectId = mongoose.Types.ObjectId;
 
